@@ -1,0 +1,103 @@
+.btn{
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	font-size: 18px;
+	line-height: 21px;
+	padding: 10px 60px;
+	min-height: 60px;
+	background: $primary;
+	font-family: $main-font;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	transition: all $t;
+	cursor: pointer;
+	border-radius: 30px;
+	appearance: none;
+	box-shadow: none;
+	border: 3px solid $primary;
+	// min-width: 180px;
+
+	&:hover{
+		background: lighten($primary, 10%);
+		border-color: lighten($primary, 10%);
+	}
+
+	&:focus{
+		outline: none;
+	}
+
+	&.width-auto{
+		// min-width: unset !important;
+	}
+
+	&.btn-light{
+		color: $primary;
+		background: rgba(#F5F8FF, .5);
+
+		&:hover{
+			background: $primary;
+			border-color: $primary;
+			color: #fff;
+		}
+	}
+
+	.btn-icon{
+		width: 40px;
+		height: 33px;
+		margin-right: 10px;
+		flex: none;
+		fill: #fff;
+	}
+
+	&.btn-blue{
+		color: $text-light;
+		background: #F5F8FF;
+	}
+
+	&.btn-small{
+		min-height: 50px;
+		border-radius: 25px;
+		padding: 10px 25px;
+		font-size: 18px;
+		line-height: 1.1;
+		font-weight: 500;
+		min-width: unset;
+		border: 0;
+		text-transform: none;
+
+		&:hover,
+		&.active{
+			background: $accent;
+			color: #fff;
+		}
+	}
+
+	&.btn-fullwidth{
+		width: 100%;
+	}
+
+	@media screen and (max-width: 575px){
+		&.xs-fullwidth{
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		min-height: 47px;
+		font-size: 14px;
+		line-height: 21px;
+		padding: 10px 24px;
+		border-width: 2px;
+
+		&.btn-small{
+			min-height: 38px;
+			border-radius: 19px;
+			padding-left: 25px;
+			padding-right: 25px;
+			font-size: 12px;
+		}
+	}
+}

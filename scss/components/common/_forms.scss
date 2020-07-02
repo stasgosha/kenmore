@@ -1,0 +1,433 @@
+.form-field{
+	position: relative;
+
+	.input-field,
+	textarea{
+		border: 1px solid $primary;
+		appearance: none;
+		background: transparent;
+		border-radius: 6px;
+		flex: auto;
+		height: 60px;
+		font-size: 20px;
+		color: $text-color;
+		font-family: $main-font;
+		font-weight: 400;
+		padding: 0 15px;
+		outline: none !important;
+		transition: all $t;
+		width: 100%;
+		// max-width: 260px;
+
+		&::placeholder{
+			color: $text-color;
+			opacity: .3;
+			transition: all $t;
+		}
+
+		&:focus{
+			background: #fff;
+
+			&::placeholder{
+				opacity: 1;
+			}
+		}
+	}
+
+	textarea{
+		resize: none;
+		padding: 15px 15px;
+		height: 194px;
+	}
+
+	.field-note{
+		font-size: 12px;
+		line-height: 14px;
+		color: $primary;
+		padding-left: 16px;
+		margin-top: 4px;
+	}
+
+	label{
+		position: relative;
+		display: block;
+
+		.fake-label{
+			position: absolute;
+			left: 16px;
+			top: 17px;
+			font-size: 20px;
+			line-height: 1.2;
+			transform-origin: left top;
+			transition: all $t;
+			opacity: .3;
+		}
+
+		input:focus + .fake-label,
+		&.not-empty .fake-label{
+			transform: translateY(-12px) scale(0.6);
+			color: $primary;
+			opacity: 1;
+		}
+	}
+}
+
+.form{
+	.form-row{
+		margin-bottom: 24px;
+
+		&:last-child,
+		&.last{
+			margin-bottom: 0 !important;
+		}
+
+		&.columns-2{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 32px;
+
+			&.with-phone{
+				grid-template-columns: 230px 1fr;
+				grid-gap: 13px;
+			}
+		}
+
+		@media screen and (max-width: 575px){
+			margin-bottom: 15px;
+
+			&.xs-columns-1{
+				grid-template-columns: 100%;
+				grid-gap: 15px;
+
+				&.with-phone{
+					grid-template-columns: 100%;
+				}
+			}
+		}
+	}
+
+	.form-note{
+		margin-bottom: 15px;
+		font-size: 14px;
+
+		a{
+			color: $primary;
+			text-decoration: none;
+
+			&:hover{
+				color: $text-dark;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.form-caption{
+		text-align: center;
+		font-size: 36px;
+		line-height: 42px;
+		color: $text-color;
+		font-weight: bold;
+		margin-bottom: 24px;
+
+		@media screen and (max-width: 575px){
+			font-size: 24px;
+			line-height: 1.2;
+			margin-bottom: 24px;
+		}
+	}
+}
+
+.order-form{
+	margin-top: 15px;
+}
+
+// 
+.fake-select{
+	position: relative;
+
+	.field{
+		position: relative;
+		border: 1px solid $primary;
+		appearance: none;
+		background: transparent;
+		border-radius: 6px;
+		height: 60px;
+		font-size: 20px;
+		color: rgba($text-color, .3);
+		font-family: $main-font;
+		font-weight: 400;
+		padding: 0 15px;
+		outline: none !important;
+		transition: all $t;
+		width: 100%;
+		align-items: center;
+		text-align: left;
+		// max-width: 260px;
+		display: flex;
+		align-items: center;
+
+		.option-icon{
+			flex: none;
+			width: 24px;
+			margin-right: 10px;
+
+			img{
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+
+		&:focus{
+			background: #fff;
+			color: $primary;
+		}
+
+		&:after{
+			content: '';
+			display: block;
+			background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='34' height='19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 2l2-2 15 15L32 0l2 2-17 17L0 2z' fill='%23FA6C06'/%3e%3c/svg%3e") no-repeat center center / contain;
+			width: 10px;
+			height: 6px;
+			position: absolute;
+			right: 13px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: all $t;
+		}
+	}
+
+	.list{
+		position: absolute;
+		left: 0;
+		top: calc(100% + 8px);
+		border-radius: 6px;
+		border: 1px solid $primary;
+		background: #fff;
+		width: 100%;
+		z-index: 2;
+		visibility: hidden;
+		transform: translateY(20px);
+		opacity: 0;
+		transition: all $t;
+
+		.option{
+			display: flex;
+			align-items: center;
+			padding: 12px 16px;
+			text-align: left;
+			width: 100%;
+			transition: all $t;
+
+			&:first-child{
+				border-radius: 6px 6px 0 0;
+			}
+
+			&:last-child{
+				margin-bottom: 0;
+				border-radius: 0 0 6px 6px;
+			}
+
+			.option-icon{
+				width: 24px;
+				flex: none;
+				margin-right: 10px;
+
+				img{
+					display: block;
+					max-width: 100%;
+					height: auto;
+				}
+			}
+
+			.option-text{
+				font-size: 18px;
+				line-height: 1.2;
+				color: $text-color;
+			}
+
+			&:hover{
+				background: rgba($primary, .2);
+			}
+		}
+	}
+
+	&.opened{
+		.list{
+			transform: translateY(0);
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.field{
+			&:after{
+				transform: rotate(-180deg);
+			}
+		}
+	}
+
+	&.selected{
+		.option-text{
+			color: $text-color;
+		}
+	}
+
+	&.js-selected-type .field{
+		.option-text{
+			display: none;
+		}
+	}
+
+	.country-name{
+		color: $text-color;
+	}
+
+	.country-code{
+		opacity: .3;
+		color: $text-color;
+	}
+}
+
+.phone-or-messenger{
+	&.on-step-2{
+		display: block;
+
+		.step-1{
+			display: none;
+		}
+
+		.step-2{
+			display: flex;
+		}
+	}
+
+	&.on-step-3{
+		.step-1,
+		.step-2{
+			display: none;
+		}
+
+		.step-3{
+			display: flex;
+		}
+	}
+
+	.step-2,
+	.step-3{
+		display: none;
+	}
+
+	.step-2{
+		&.messenger{
+			.if-phone{
+				display: none;
+			}
+		}
+
+		&.phone{
+			.if-messenger{
+				display: none;
+			}
+		}
+
+		.item{
+			flex: auto;
+
+			&:first-child{
+				width: 56px;
+				flex: none;
+				margin-right: 4px;
+
+				.fake-select{
+					.field{
+						padding: 0 5px;
+
+						&:after{
+							right: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.step-3{
+		.column{
+			flex: auto;
+
+			&:first-child{
+				width: 56px;
+				margin-right: 4px;
+				display: flex;
+				flex-direction: column;
+				flex: none;
+
+				.item{
+					margin-bottom: 2px;
+
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+
+				.fake-select{
+					height: 29px;
+
+					.field{
+						height: 29px;
+						padding-left: 5px;
+
+						&:after{
+							right: 7px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.tel-phone{
+	position: relative;
+	border: 1px solid $primary;
+	appearance: none;
+	background: transparent;
+	border-radius: 6px;
+	height: 60px;
+	font-size: 20px;
+	color: rgba($text-color, .5);
+	font-family: $main-font;
+	font-weight: 400;
+	padding: 0 15px;
+	outline: none !important;
+	transition: all $t;
+	width: 100%;
+	align-items: center;
+	text-align: left;
+	// max-width: 260px;
+	display: flex;
+	align-items: center;
+
+	.code{
+		color: $text-color;
+		line-height: 26px;
+		margin-right: 5px;
+		flex: none;
+	}
+
+	input{
+		width: 100%;
+		display: block;
+		min-width: unset;
+		flex: auto;
+		height: 26px;
+		border: 0;
+		border-bottom: 1px solid rgba(#000, .3);
+		outline: none !important;
+		font-family: inherit;
+		font-size: 20px;
+		color: $text-color;
+		background: transparent;
+	}
+}

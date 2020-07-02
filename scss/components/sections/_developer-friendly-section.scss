@@ -1,0 +1,143 @@
+.developer-friendly-section{
+	padding: 65px 0 75px;
+
+	.section-inner{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.section-content{
+		width: calc(50% - 15px);
+		max-width: 530px;
+	}
+
+	.section-slider{
+		width: calc(50% - 15px);
+		max-width: 520px;
+	}
+
+	.section-text{
+		margin-bottom: 35px;
+	}
+
+	.section-caption{
+		margin-bottom: 20px;
+	}
+
+	.slider-nav-slider{
+		.slide{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-left: 5px;
+			padding-right: 5px;
+
+			.btn{
+				white-space: nowrap;
+				// padding-left: 5px;
+				// padding-right: 5px;
+				// min-width: 150px;
+			}
+
+			&.slick-current{
+				.btn{
+					background: $accent;
+					color: #F5F8FF;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.section-inner{
+			flex-direction: column;
+		}
+
+		.section-content{
+			width: 100%;
+			max-width: unset;
+			display: flex;
+			justify-content: space-between;
+
+			.content-top{
+				max-width: 295px;
+				margin-right: 35px;
+			}
+
+			.content-bottom{
+				max-width: 360px;
+				padding-top: 54px;
+
+				.tick-list{
+					li{
+						&:nth-child(odd){
+							width: 57%;
+						}
+
+						&:nth-child(even){
+							width: 43%;
+						}
+					}
+				}
+			}
+		}
+
+		.section-slider{
+			margin-top: 25px;
+			width: 100%;
+			max-width: unset;
+		}
+
+		.slider-with-nav-component .cmp-nav{
+			justify-content: center;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.section-content{
+			display: block;
+			margin-right: 0;
+			width: 100%;
+
+			.section-text{
+				text-align: center;
+			}
+
+			.content-top{
+				max-width: unset;
+				margin-right: 0;
+			}
+
+			.content-bottom{
+				padding-top: 0;
+
+				.tick-list{
+					width: calc(100% + 5px * 2);
+					margin-left: -5px;
+					margin-right: -5px;
+					li{
+						padding: 0 5px 0 28px;
+
+						&:before{
+							left: 5px;
+						}
+
+						&:nth-child(odd){
+							width: 56%;
+						}
+
+						&:nth-child(even){
+							width: 44%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.slider-with-nav-component .cmp-nav{
+			justify-content: unset;
+		}
+	}
+}

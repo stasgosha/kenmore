@@ -1,0 +1,79 @@
+.traders-room-first-section{
+	padding: 48px 0 105px;
+
+	.section-inner{
+		display: grid;
+		grid-gap: 38px;
+		grid-template-columns: 585px 1fr;
+		align-items: center;
+	}
+
+	.page-caption{
+		margin-bottom: 24px;
+	}
+
+	.section-text{
+		margin-bottom: 24px;
+
+		p{
+			font-size: 20px;
+			line-height: 1.5;
+		}
+	}
+
+	.section-footer{
+		display: grid;
+		grid-gap: 24px;
+		grid-template-columns: max-content max-content;
+	}
+
+	@media screen and (max-width: 1199px){
+		.section-inner{
+			grid-template-columns: 385px 1fr;
+			grid-gap: 55px;
+		}
+
+		.section-image{
+			img{
+				width: 660px;
+			}
+		}
+
+		.section-text{
+			p{
+				font-size: 14px;
+				line-height: 23px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.section-image{
+			// display: none;
+			margin-top: 43px;
+
+			img{
+				height: 257px;
+				width: auto;
+			}
+		}
+
+		.section-inner{
+			display: block;
+			text-align: center;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.section-footer{
+			grid-gap: 20px;
+			grid-template-columns: 100%;
+		}
+
+		.btn{
+			width: 270px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

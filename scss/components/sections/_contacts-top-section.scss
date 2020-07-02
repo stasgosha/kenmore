@@ -1,0 +1,87 @@
+.contacts-top-section{
+	padding: 180px 0 50px;
+
+	.section-inner{
+		display: flex;
+		align-items: center;
+	}
+
+	.section-content{
+		width: 50%;
+		padding-right: 15px;
+	}
+
+	.section-image{
+		width: 50%;
+		padding-left: 15px;
+	}
+
+	.section-caption{
+		margin-bottom: 24px;
+	}
+
+	@media screen and (max-width: 991px){
+		.section-content{
+			width: 55%;
+		}
+
+		.section-image{
+			width: 45%;
+
+			img{
+				width: 308px;
+				height: auto;
+				display: block;
+			}
+		}
+
+		.section-caption{
+			.sc-title{
+				font-size: 44px;
+				line-height: 52px;
+			}
+		}
+
+		.section-text{
+			p{
+				font-size: 14px;
+				line-height: 22px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.section-inner{
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+
+		.section-content{
+			width: 100%;
+			padding: 0;
+			text-align: center;
+		}
+
+		.section-image{
+			width: 150px;
+			padding: 0;
+			margin-bottom: 36px;
+
+			img{
+				width: 100%;
+			}
+		}
+
+		.section-caption{
+			margin-bottom: 20px;
+			text-align: center;
+			max-width: unset;
+
+			.sc-title{
+				font-size: 36px;
+				line-height: 42px;
+			}
+		}
+	}
+}

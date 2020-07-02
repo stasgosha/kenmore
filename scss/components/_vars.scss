@@ -1,0 +1,25 @@
+// Fonts
+$main-font: 'Roboto', Arial, sans-serif;
+$second-font: $main-font;
+// $third-font: 'Playfair Display SC', serif;
+
+// Colors
+$orange: #FA6C06;
+$blue: #7E97C9;
+
+$dark: #222;
+$gray: #2A2B2D;
+$light: #99A2B4;
+
+$text-color: $gray;
+$text-dark: $dark;
+$text-light: #6B6B6B;
+
+$primary: $orange;
+$accent: $blue;
+
+// Params
+$body-bg: #fff; // site background
+$t: .3s; // animation duration
+$r: 5px; // default border radius
+$shadow: 0px 5px 15px rgba(0, 0, 0, 0.08); // default card shadow

@@ -1,0 +1,37 @@
+.tabs-nav{
+	display: flex;
+	white-space: nowrap;
+	padding: 10px;
+	border: 2px solid rgba(126, 151, 201, 0.2);
+	border-radius: 35px;
+	overflow-x: auto;
+
+	li{
+		margin-right: 6px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	.nav-btn{
+		padding: 10px;
+		border-radius: 22px;
+		color: $accent;
+		font-size: 20px;
+		line-height: 1.15;
+
+		&:hover,
+		&.current{
+			background: $accent;
+			color: #F5F8FF;
+		}
+
+		@media screen and (max-width: 767px){
+			font-size: 16px;
+		}
+	}
+}
+
+.tabs-nav-wrapper{
+}

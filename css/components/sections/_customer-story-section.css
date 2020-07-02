@@ -1,0 +1,20 @@
+.customer-story-section {
+  background: url(../img/backgrounds/video-bg.svg) no-repeat center center/cover;
+  padding: 85px 0; }
+  .customer-story-section .section-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .customer-story-section .section-video {
+    width: calc(50% + 30px); }
+  .customer-story-section .section-content {
+    padding-left: 88px; }
+  .customer-story-section .section-caption {
+    margin-bottom: 24px; }
+  .customer-story-section .section-text p {
+    margin-bottom: 8px; }
+    .customer-story-section .section-text p:last-child {
+      margin-bottom: 0; }

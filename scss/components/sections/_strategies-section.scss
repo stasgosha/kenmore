@@ -1,0 +1,67 @@
+.strategies-section{
+	padding: 50px 0;
+
+	.page-caption{
+		color: $primary;
+		margin-bottom: 24px;
+		text-align: center;
+		max-width: unset;
+	}
+
+	.section-info{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-content: center;
+		margin-bottom: 100px;
+
+		p{
+			font-size: 20px;
+			line-height: 1.25;
+		}
+
+		.tick-list{
+			width: auto;
+			margin-left: 0;
+			margin-right: 0;
+
+			li{
+				width: 100%;
+				margin-bottom: 0;
+				font-weight: bold;
+			}
+		}
+	}
+
+	.section-formula{
+		margin-bottom: 2.6vw;
+	}
+
+	img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	@media screen and (max-width: 991px){
+		.section-info{
+			margin-bottom: 45px;
+
+			p{
+				font-size: 14px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.section-info{
+			flex-direction: column;
+			margin-bottom: 35px;
+
+			p{
+				margin-bottom: 15px;
+				text-align: center;
+			}
+		}
+	}
+}

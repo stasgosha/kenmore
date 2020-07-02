@@ -1,0 +1,148 @@
+.solutions-section{
+	position: relative;
+	padding: 292px 0;
+
+	@media screen and (max-width: 991px){
+		padding: 195px 0;
+	}
+
+	@media screen and (max-width: 767px){
+		display: none;
+	}
+
+	.section-bg{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+		}
+	}
+
+	.container{
+		position: relative;
+		z-index: 2;
+	}
+
+	.section-caption{
+		text-align: center;
+		color: $primary;
+		position: relative;
+		z-index: 3;
+	}
+
+	.solutions-list{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		@media screen and (max-width: 991px){
+			transform: scale(0.7) translate(-50%, -50%);
+		}
+	}
+}
+
+.solutions-list{
+	.item{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+
+		.item-icon{
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background: #fff;
+			box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.1);
+			margin-bottom: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			svg{
+				width: 24px;
+				height: 22px;
+				display: block;
+				fill: $primary;
+			}
+		}
+
+		p{
+			text-align: center;
+			white-space: nowrap;
+			max-width: 136px;
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		&:nth-child(1){
+			right: 386px;
+			bottom: -18px;
+		}
+
+		&:nth-child(2){
+			right: 270px;
+			bottom: 140px;
+		}
+
+		&:nth-child(3){
+			right: 84px;
+			bottom: 88px;
+		}
+
+		&:nth-child(4){
+			left: -20px;
+			bottom: 160px;
+		}
+
+		&:nth-child(5){
+			left: 165px;
+			bottom: 102px;
+		}
+
+		&:nth-child(6){
+			left: 333px;
+			bottom: 46px;
+		}
+
+		&:nth-child(7){
+			left: 380px;
+			top: -2px;
+		}
+
+		&:nth-child(8){
+			left: 277px;
+			top: 134px;
+		}
+
+		&:nth-child(9){
+			left: 90px;
+			top: 74px;
+		}
+
+		&:nth-child(10){
+			right: -20px;
+			top: 146px;
+		}
+
+		&:nth-child(11){
+			right: 137px;
+			top: 70px;
+		}
+
+		&:nth-child(12){
+			right: 361px;
+			top: 108px;
+		}
+	}
+}
