@@ -326,6 +326,8 @@ document.addEventListener('DOMContentLoaded', function(){
 			dots: false,
 			infinite: true,
 			speed: 600,
+			autoplay: true,
+			autoplaySpeed: 6000,
 			asNavFor: $(el).find('.slider-nav-slider')
 		});
 
