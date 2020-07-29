@@ -401,8 +401,14 @@ document.addEventListener('DOMContentLoaded', function(){
 	$(document).on('click', 'a[href^="#"]', function (event) {
 		event.preventDefault();
 
+		let pageNavOffset = 0;
+
+		if( $(this).is('.nav-btn') ){
+			pageNavOffset = 80;
+		}
+
 		$('html, body').animate({
-			scrollTop: $($.attr(this, 'href')).offset().top - 80
+			scrollTop: $($.attr(this, 'href')).offset().top - 80 - pageNavOffset
 		}, 500);
 	});
 
