@@ -1,0 +1,22 @@
+.check-out-section{
+	background: #000 url(../img/backgrounds/check-out-section-bg.jpg) no-repeat center center;
+	text-align: center;
+	color: #fff;
+	padding: 100px 0;
+	background-size: cover;
+
+	h2{
+		font-size: 48px;
+		color: #fff;
+		font-weight: 300;
+		line-height: 1.1;
+		margin-top: 0;
+		margin-bottom: 50px;
+	}
+
+	@media screen and (max-width: 767px){
+		.container{
+			padding: 0 15px;
+		}
+	}
+}

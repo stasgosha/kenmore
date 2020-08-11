@@ -1,0 +1,58 @@
+.phone-slider-wrap{
+	background: url(../img/get-app/phone.png) no-repeat;
+	width: 307px;
+	height: 547px;
+	left: 50%;
+	margin-left: -153px;
+	position: relative;
+
+	.phone-slider{
+		width: 211px;
+		height: 370px;
+		top: 87px;
+		left: 48px;
+		background: #FFF;
+		position: relative;
+		overflow: hidden;
+		margin: 0 !important;
+
+		.slide{
+			padding: 0 !important;
+			position: relative;
+		}
+	}
+
+	.slide{
+		span{
+			position: absolute;
+			background: rgba(235, 104, 6, 0.7);
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+
+			&:before{
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				width: 13px;
+				height: 13px;
+				border-radius: 50%;
+				border: 1px solid #eb6806;
+				animation: shadow .7s infinite ease-in-out;
+			}
+		}
+	}
+}
+
+@keyframes shadow {
+	from {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	to {
+		transform: scale(3);
+		opacity: 0;
+	}
+}

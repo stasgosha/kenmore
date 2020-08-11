@@ -28,6 +28,14 @@
 	margin-right: -10px;
 	justify-content: space-between;
 	overflow-x: auto;
+
+	@media screen and (max-width: 991px){
+		// Chrome
+		&::-webkit-scrollbar { width: 0; }
+
+		// FF
+		scrollbar-width: none;
+	}
 	
 	li{
 		padding: 0 10px;
@@ -53,6 +61,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				position: relative;
 
 				.active{
 					position: absolute;

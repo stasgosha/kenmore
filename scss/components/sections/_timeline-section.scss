@@ -8,6 +8,22 @@
 		.tabs-nav{
 			background: #fff;
 		}
+
+		@media screen and (max-width: 991px){
+			max-width: 690px;
+		}
+
+		@media screen and (max-width: 767px){
+			max-width: 525px;
+		}
+
+		@media screen and (max-width: 575px){
+			max-width: calc(100% - 30px);
+		}
+
+		@media screen and (max-width: 374px){
+			max-width: calc(100% - 20px);
+		}
 	}
 
 	.tabs-nav-wrapper{
@@ -28,6 +44,10 @@
 
 			.sub-content{
 				position: relative;
+			}
+
+			.sub-image{
+				width: 100%;
 			}
 
 			&.reverse{

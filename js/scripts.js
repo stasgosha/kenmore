@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
 
+	$('.blue-card .card-features ul:not(.tick-list)').addClass('tick-list column-1');
+
 	// Sliders
 	function equalSlideHeight(slider){
 		$(slider).on('setPosition', function () {
@@ -141,6 +143,17 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	}
 
+	$('.phone-slider').slick({
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		swipe: false,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		dots: false
+	});
+
+	// Select
 	$('.fake-select').each(function(i, el){
 		$(el).find('.field').click(function(e){
 			e.preventDefault();
@@ -460,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			minHeight: headerHeight+'px'
 		});
 
-		if ($(window).width() >= 768) {
+		// if ($(window).width() >= 768) {
 			$(window).scroll(function(e){
 				if ($(window).scrollTop() + headerHeight > pageNavTopOffset) {
 					$('.timeline-section .tabs-nav-wrapper').addClass('sticky');
@@ -470,7 +483,7 @@ document.addEventListener('DOMContentLoaded', function(){
 					$('.timeline-section .tabs-nav-wrapper').css({'top': 0})
 				}
 			});
-		}
+		// }
 	}
 
 	// var lastScrollTop = 0;
