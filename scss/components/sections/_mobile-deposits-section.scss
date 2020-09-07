@@ -1,3 +1,7 @@
 .mobile-deposits-section{
 	background: #FFFFFF url("../img/backgrounds/mobile-deposits-bg.jpg") no-repeat 50% calc(100% - 40px);
+
+	@media screen and (min-width: 768px){
+		padding-bottom: 70px;
+	}
 }

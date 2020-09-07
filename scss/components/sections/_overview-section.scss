@@ -8,8 +8,8 @@
 		margin-right: auto;
 		padding-left: 15px;
 		padding-right: 15px;
-		font-size: 15px;
-		line-height: 23px;
+		// font-size: 15px;
+		// line-height: 23px;
 		display: flex;
 	}
 
@@ -27,18 +27,18 @@
 	}
 
 	h2{
-		font-size: 18px;
-		line-height: 24px;
+		// font-size: 18px;
+		// line-height: 24px;
 		font-weight: 600;
 		margin-bottom: 20px;
 		margin-top: 50px;
 		color: #2c2c2c;
 	}
 
-	p{
-		font-size: 15px;
-		line-height: 23px;
-	}
+	// p{
+	// 	font-size: 15px;
+	// 	line-height: 23px;
+	// }
 
 	@media screen and (max-width: 767px){
 		.section-inner{
@@ -111,4 +111,10 @@
 .overview-section{
 	background: #FFFFFF url(../img/backgrounds/overview.jpg) no-repeat 50% calc(100% - 40px);
 	border-bottom: 1px solid #eaeaea;
+
+	@media screen and (min-width: 768px){
+		.section-text{
+			margin-bottom: 135px;
+		}
+	}
 }
