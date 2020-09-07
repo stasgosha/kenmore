@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	$('.blue-card .card-features ul:not(.tick-list)').addClass('tick-list column-1');
 
+	setTimeout(function(){
+		document.body.classList.add('loaded');
+	}, 300);
+
 	// Sliders
 	function equalSlideHeight(slider){
 		$(slider).on('setPosition', function () {
